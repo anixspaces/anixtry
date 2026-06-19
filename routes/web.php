@@ -8,6 +8,10 @@ use App\Http\Controllers\Frontend\GalleryController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Admin\DashboardController; 
 use App\Http\Controllers\Admin\ContactController as AdminContactController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -44,5 +48,21 @@ Route::get('/contacts/{contact}', [AdminContactController::class,
 Route::delete('/contacts/{contact}', [AdminContactController::class,
 'destroy'])
 ->name('contacts.destroy');
+
+Route::resource('categories', CategoryController::class);
+
+Route::resource(
+    'products',
+    AdminProductController::class
+);
+
+Route::resource(
+    'galleries',
+    AdminGalleryController::class
+);
+
 });
+Route::view('/about', 'frontend.about')
+    ->name('about');
+
 require __DIR__.'/auth.php';

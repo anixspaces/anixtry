@@ -17,10 +17,10 @@
                     Home
                 </a>
 
-                <a href="/about"
-                   class="hover:text-red-500">
-                    About
-                </a>
+                <a href="{{ route('about') }}"
+                    class="hover:text-red-500">
+                        About
+                    </a>
 
                 <a href="/products"
                    class="hover:text-red-500">

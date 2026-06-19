@@ -43,6 +43,12 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{ route('about') }}">
+                            About
+                        </a>
+                    </li>
+
                 </ul>
 
             </div>

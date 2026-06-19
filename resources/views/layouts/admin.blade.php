@@ -15,17 +15,59 @@
 
 <div class="flex">
 
-    <aside class="w-64 bg-white h-screen">
+   <div class="w-64 bg-gray-900 text-white min-h-screen">
 
-        <div class="p-4">
+    <div class="p-6 text-2xl font-bold">
 
-            <h2 class="font-bold">
-                Paint Admin
-            </h2>
+        Paint Admin
 
-        </div>
+    </div>
 
-    </aside>
+    <nav class="p-4 space-y-3">
+
+        <a
+        href="{{ route('admin.dashboard') }}"
+        class="block">
+
+            Dashboard
+
+        </a>
+
+        <a
+        href="{{ route('admin.categories.index') }}"
+        class="block">
+
+            Categories
+
+        </a>
+
+        <a
+        href="{{ route('admin.products.index') }}"
+        class="block">
+
+            Products
+
+        </a>
+
+        <a
+        href="{{ route('admin.galleries.index') }}"
+        class="block">
+
+            Galleries
+
+        </a>
+
+        <a
+        href="{{ route('admin.contacts.index') }}"
+        class="block">
+
+            Messages
+
+        </a>
+
+    </nav>
+
+</div>
 
     <main class="flex-1 p-6">
 

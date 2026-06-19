@@ -1,0 +1,73 @@
+@extends('layouts.admin')
+
+@section('content')
+
+<h1 class="text-3xl font-bold mb-6">
+
+    Add Category
+
+</h1>
+
+<form
+    action="{{ route('admin.categories.store') }}"
+    method="POST"
+    enctype="multipart/form-data">
+
+    @csrf
+
+    <div class="mb-4">
+
+        <label>Name</label>
+
+        <input
+            type="text"
+            name="name"
+            class="w-full border p-3">
+
+    </div>
+
+    <div class="mb-4">
+
+        <label>Description</label>
+
+        <textarea
+            name="description"
+            class="w-full border p-3"></textarea>
+
+    </div>
+
+    <div class="mb-4">
+
+        <label>Image</label>
+
+        <input
+            type="file"
+            name="image">
+
+    </div>
+
+    <div class="mb-4">
+
+        <label>
+
+            <input
+                type="checkbox"
+                name="status"
+                checked>
+
+            Active
+
+        </label>
+
+    </div>
+
+    <button
+        class="bg-blue-500 text-white px-4 py-2 rounded">
+
+        Save
+
+    </button>
+
+</form>
+
+@endsection
